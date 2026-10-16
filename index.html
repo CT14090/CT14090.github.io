@@ -113,6 +113,12 @@ section.about h2{font-family:var(--mono);font-weight:400;font-size:0.8rem;color:
 .path li::before{content:"";position:absolute;left:-4px;top:0.6rem;width:7px;height:7px;border-radius:50%;background:var(--signal)}
 .path b{font-family:var(--mono);font-weight:400;color:var(--ink);font-size:0.82rem;margin-right:0.5rem}
 
+.awards{list-style:none;margin:0;padding:0;display:grid}
+.awards li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1rem;padding-block:0.9rem;border-bottom:1px solid var(--line)}
+.awards li:first-child{padding-top:0}
+.awards .yr{font-family:var(--mono);font-size:0.8rem;color:var(--muted);padding-top:0.2rem}
+.awards b{display:block;font-family:var(--serif);font-weight:500;font-size:1.2rem;line-height:1.3;color:var(--ink)}
+.awards span.d{color:var(--soft);font-size:0.92rem}
 footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:1.5rem 2.5rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:0.76rem;color:var(--muted)}
 
 dialog.zoom{border:none;padding:0;background:transparent;max-width:min(96vw,1400px);max-height:92vh}
@@ -132,6 +138,7 @@ dialog.zoom button{position:absolute;top:0.5rem;right:0.5rem;background:#131316;
 @media (prefers-reduced-motion:reduce){.bars.play .fill{animation:none}.shots img:hover{transform:none}}
 
 @media (max-width:900px){
+  .awards li{grid-template-columns:3.5rem minmax(0,1fr)}
   header.hero{grid-template-columns:minmax(0,1fr);gap:2rem;padding-block:3rem 2.5rem}
   .entry{grid-template-columns:minmax(0,1fr);gap:1rem}
   .date{grid-auto-flow:column;justify-content:start;align-items:center;gap:0.8rem}
@@ -150,6 +157,7 @@ dialog.zoom button{position:absolute;top:0.5rem;right:0.5rem;background:#131316;
     <span>yeonwoo.woo / portfolio</span>
     <div class="links">
       <a href="#log">projects</a>
+      <a href="#achievements">achievements</a>
       <a href="#about">about</a>
       <a href="https://github.com/CT14090" target="_blank" rel="noopener">github</a>
       <a href="https://www.linkedin.com/in/yeonwoo-woo-ct1409" target="_blank" rel="noopener">linkedin</a>
@@ -326,6 +334,18 @@ dialog.zoom button{position:absolute;top:0.5rem;right:0.5rem;background:#131316;
       <div class="result"></div>
     </article>
   </main>
+
+  <section class="about" id="achievements" aria-labelledby="ach-h">
+    <h2 id="ach-h">Achievements</h2>
+    <ol class="awards">
+      <li><span class="yr">2026</span><div><b>Presidential Science Scholarship</b><span class="d">Korea Student Aid Foundation (KOSAF), 대통령과학장학금.</span></div></li>
+      <li><span class="yr">2026</span><div><b>McGill Dobson Centre for Entrepreneurship · Lean Startup, 2026 cohort</b><span class="d">Selected with the Big mc team. Customer discovery in practice: we paused building and went back to student interviews.</span></div></li>
+      <li><span class="yr">2026</span><div><b>McGill Engine · TechAccel Program</b><span class="d">Big mc selected for McGill's tech venture accelerator.</span></div></li>
+      <li><span class="yr">2026</span><div><b>30 McGill credits for the IB Diploma</b><span class="d">HL Mathematics AA, Physics and Chemistry.</span></div></li>
+      <li><span class="yr">2022–26</span><div><b>iGEM Silver Medal</b><span class="d">Team result. I led math and analysis: a Michaelis–Menten model and eight Python plots, presented to international judges.</span></div></li>
+      <li><span class="yr">2024–26</span><div><b>About $1,000 in school funding</b><span class="d">For the RFID meal-plan system, after I presented options to the vice principal and cafeteria manager.</span></div></li>
+    </ol>
+  </section>
 
   <section class="about" id="about" aria-labelledby="about-h">
     <h2 id="about-h">About</h2>
